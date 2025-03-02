@@ -92,3 +92,127 @@
         Clicker Simulation
       </h1>
     </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/fun/clicker" class="current">
+            Clicker Simulation
+          </a>
+        </li>
+        <li>
+          <a href="/fun/monopoly">
+            Monopoly
+          </a>
+          <ul>
+            <li>
+              <a href="/fun/monopoly/1p">
+                1 Player Mode
+              </a>
+            </li>
+            <li>
+              <a href="/fun/monopoly/2p">
+                2 Player Mode
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/fun/contact">
+            Contact us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <p>
+          Clicker games are video games where players perform repetitive actions, like clicking, to earn rewards. They are also known as incremental games, idle games, or tap games. 
+        </p>
+        <p>
+          How do clicker games work?
+          <ul>
+            <li>Players click on the screen to accumulate resources, like currency</li>
+            <li>Players can use the currency to upgrade characters or items, and unlock new features </li>
+            <li>Players can progress in the game even when they are not actively playing </li>
+            <li>In some games, players can progress without having to perform any actions </li>
+          </ul>
+        </p>
+        <p>
+          Why are clicker games popular? 
+          <ul>
+            <li>Their simple mechanisms make them popular</li>
+            <li>They are easy to pick up and play</li>
+            <li>They encourage a sense of accomplishment, with clear goals and checkpoints</li>
+            <li>They encourage a sense of growth as players upgrade</li>
+          </ul>
+        </p>
+        <p>
+          Examples of clicker games: Cookie Clicker, Clicker Heroes, and Capybara Clicker. 
+          <br>
+          Other clicker game subgenres: 
+          <ul>
+            <li>Idle games that blend with other game types, like business simulations and world-building adventures</li>
+            <li>Combat-based idle games, like Tap Titans 2</li>
+          </ul>
+        </p>
+      </article>
+      <article>
+        <header>
+          <h3>
+            <b class="undetermined">???</b> Clicker
+          </h3>
+        </header>
+        <div class="clickingcontainer">
+          <div class="clickchoice">
+            <button class="chooserandom" onclick="choosetheme()">
+              Choose your theme
+            </button>
+          </div>
+          <div class="purchase1">
+          </div>
+          <div class="purchase2">
+          </div>
+          <div class="purchase3">
+          </div>
+          <div class="purchase4">
+          </div>
+        </div>
+      </article>
+    </main>
+    <script>
+      let a1 = 1;
+      function buy1() {
+        a1 += 1;
+     } 
+      function food() {
+        let A = document.querySelector(".purchase1");
+        A.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Mouth </h4> <h5> +1 Click Power </h5></div>";
+        let determinenow = document.querySelector(".undetermined");
+        determinenow.innerHTML = "<b>Food</b>";
+      }
+      function aura() {
+        food();
+      }
+      function activatetheme(theme) {
+        if (theme == 0) {
+          food();
+        } else if (theme == 1) {
+          aura();
+        }
+      }
+      function choosetheme() {
+        let a = "food";
+        let b = "aura";
+        let c = Math.floor(Math.random() * 2);
+        let theme;
+        if (c == 0) {
+          theme = a;
+        } else if (c == 1) {
+          theme = b;
+        }
+        window.alert("Your chosen theme is " + theme);
+        activatetheme(theme);
+      }
+    </script>
+  </body>
+</html>
