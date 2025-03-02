@@ -78,6 +78,12 @@
         background-color: black;
         color: white;
       }
+      div.purchase1,div.purchase2,div.purchase3,div.purchase4 {
+  border: 1px solid coral;
+  background-color: coral;
+  border-radius: 5px;
+  color: brown;
+} 
     </style>
   </head>
   <body>
@@ -162,12 +168,22 @@
               Choose your theme
             </button>
           </div>
+          <div class="purchase1">
+          </div>
+          <div class="purchase2">
+          </div>
+          <div class="purchase3">
+          </div>
+          <div class="purchase4">
+          </div>
         </div>
       </article>
     </main>
     <script>
       function food() {
-        window.alert("this has not been completed sorry.")
+        let A = document.QuerySelector(".purchase1");
+A.innerHTML = "<div class='purchase1' onclick='buy1' > <h4> 1 More Mouth <h4>
+ <h5> +1 Click Power </h5>" 
       }
       function aura() {
         food();
