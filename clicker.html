@@ -180,38 +180,41 @@
       </article>
     </main>
     <script>
-      function food() {
-        let A = document.QuerySelector(".purchase1");
-A.innerHTML = "<div class='purchase1' onclick='buy1' > <h4> 1 More Mouth <h4>
- <h5> +1 Click Power </h5>" 
-      }
-      function aura() {
-        food();
-      }
-      function activatetheme(theme) {
-        if (theme = 0) {
-          food();
-        } else if (theme = 1) {
-          aura();
-        } else {
-          document.reload();
-        }
-      }
-      function choosetheme() {
-        let a = "food";
-        let b = "aura";
-        let c = Math.floor(Math.random() * 1);
-        let theme;
-        if (c = 0) {
-          let theme = a;
-        } else if (c = 1) {
-          let theme = b;
-        } else {
-          document.reload();
-        };
-        window.alert("Your chosen theme is " + theme);
-        activatetheme(theme);
-      }
+   const themes = ["food", "aura"];
+
+function chooseTheme() {
+  const themeIndex = Math.floor(Math.random() * themes.length);
+  const chosenTheme = themes[themeIndex];
+  window.alert(`Your chosen theme is ${chosenTheme}`);
+  activateTheme(themeIndex);
+}
+
+function activateTheme(themeIndex) {
+  switch (themeIndex) {
+    case 0:
+      food();
+      break;
+    case 1:
+      aura();
+      break;
+    default:
+      console.error("Invalid theme index");
+  }
+}
+
+function food() {
+  const purchaseElement = document.querySelector(".purchase1");
+  purchaseElement.innerHTML = `
+    <div class="purchase1" onclick="buy1()">
+      <h4>1 More Mouth</h4>
+      <h5>+1 Click Power</h5>
+    </div>
+  `;
+}
+
+function aura() {
+  food();
+}
     </script>
   </body>
 </html>
