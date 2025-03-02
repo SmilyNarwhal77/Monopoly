@@ -56,6 +56,14 @@
         opacity: 1;
         background-color: white;
       }
+      nav > ul > li > ul {
+        background-color: white;
+        border: 1px solid black;
+        list-style-type: none;
+      }
+      .current {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -67,19 +75,20 @@
     <nav>
       <ul>
         <li>
-          <a href="/monopoly" class="current">
-            Home
+          <a href="/fun/monopoly" class="current">
+            Monopoly
           </a>
-        </li>
-        <li>
-          <a href="monopoly/1p">
-            1 Player Mode
-          </a>
-        </li>
-        <li>
-          <a href="monopoly/2p">
-            2 Player Mode
-          </a>
+          <ul>
+            <li>
+              <a href="/fun/monopoly/1p">
+                1 Player Mode
+              </a>
+            </li>
+            <li>
+              <a href="/fun/monopoly/2p">
+                2 Player Mode
+              </a>
+            </li>
         </li>
         <li>
           <a href="monopoly/contact">
