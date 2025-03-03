@@ -88,11 +88,16 @@
         width: 30vw;
         padding: max(3vmax, 20px);
       }
-      div.clickhere {
+      button.clickhere {
         height: 50vmin;
         width: 60vw;
         position: absolute;
         left: 40vw;
+        border: 1px solid black;
+        background-color: lightgrey;
+        color: black;
+        padding: 10px;
+        border-radius: 3px;
       }
     </style>
     <script>
@@ -189,8 +194,17 @@
           </div>
           <div class="purchase4">
           </div>
-          <div class="clickhere" onclick="click()">
+          <button class="clickhere" onclick="click()">
             Click Here
+          </button>
+          <div>
+            Number of clicks:
+          </div>
+          <div class="update">
+            0
+          </div>
+          <div class="power">
+            1
           </div>
         </div>
       </article>
@@ -201,17 +215,21 @@
       let clicks = 0;
       function click() {
         clicks += clickpower;
-      }
+        let update = document.querySelector(".update");
+        update.innerHTML = "<div class='update'>" + clicks + "</div>";
+      };
       function buy1() {
         clickpower += 1;
-        console.log(clickpower);
+        let power = document.querySelector(".power");
+        power.innerHTML = "<div class='power'>" + clickpower + "</div>";
         clicks -= 10;
       }; 
       function buy2() {
         clickpower += 3;
-        console.log(clickpower);
+        let power = document.querySelector(".power");
+        power.innerHTML = "<div class='power'>" + clickpower + "</div>";
         clicks -= 30;
-      }
+      };
       function food() {
         let food1 = document.querySelector(".purchase1");
         food1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Mouth </h4> <h5> +1 Click Power </h5></div>";
