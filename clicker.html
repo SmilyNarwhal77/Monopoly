@@ -85,6 +85,7 @@
         color: brown;
         height: 12vmin;
         width: 30vw;
+        padding: max(3vmax, 20px);
       } 
     </style>
     <script>
@@ -196,14 +197,14 @@
       function food() {
         let food1 = document.querySelector(".purchase1");
         food1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Mouth </h4> <h5> +1 Click Power </h5></div>";
-        let determinenow = document.querySelector(".undetermined");
-        determinenow.innerHTML = "<b class="undetermined">Food</b>";
+        let determinenow = document.querySelector('.undetermined');
+        determinenow.innerHTML = "<b class='undetermined'>Food</b>";
       };
       function aura() {
         let aura1 = document.querySelector(".purchase1");
         aura1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Rizz </h4> <h5> +1 Click Power </h5></div>";
-        let determinenow = document.querySelector(".undetermined");
-        determinenow.innerHTML = "<b class="undetermined">Aura</b>";
+        let determinenow = document.querySelector('.undetermined');
+        determinenow.innerHTML = "<b class='undetermined'>Aura</b>";
       };
       function choosetheme() {
         let a = "food";
