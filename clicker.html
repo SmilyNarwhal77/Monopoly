@@ -223,12 +223,16 @@
         let power = document.querySelector(".power");
         power.innerHTML = "<div class='power'>" + clickpower + "</div>";
         clicks -= 10;
+        let update = document.querySelector(".update");
+        update.innerHTML = "<div class='update'>" + clicks + "</div>";
       }; 
       function buy2() {
         clickpower += 3;
         let power = document.querySelector(".power");
         power.innerHTML = "<div class='power'>" + clickpower + "</div>";
         clicks -= 30;
+        let update = document.querySelector(".update");
+        update.innerHTML = "<div class='update'>" + clicks + "</div>";
       };
       function food() {
         let food1 = document.querySelector(".purchase1");
