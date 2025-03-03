@@ -67,6 +67,7 @@
       div.clickingcontainer {
         height: 85vh;
         width: 85vw;
+        position: relative;
       }
       div.clickchoice {
         height: 20%;
@@ -86,7 +87,13 @@
         height: 12vmin;
         width: 30vw;
         padding: max(3vmax, 20px);
-      } 
+      }
+      div.clickhere {
+        height: 50vmin;
+        width: 60vw;
+        position: absolute;
+        left: 40vw;
+      }
     </style>
     <script>
       
@@ -182,27 +189,41 @@
           </div>
           <div class="purchase4">
           </div>
+          <div class="clickhere" onclick="click()">
+            Click Here
+          </div>
         </div>
       </article>
     </main>
     <script>
-      let a1 = 1;
       let clickpower = 1;
       let ps = 0;
       let clicks = 0;
+      function click() {
+        clicks += clickpower;
+      }
       function buy1() {
-        a1 += 1;
-        alert(a1);
+        clickpower += 1;
+        console.log(clickpower);
+        clicks -= 10;
       }; 
+      function buy2() {
+        clickpower += 3;
+        console.log(clickpower);
+        clicks -= 30
       function food() {
         let food1 = document.querySelector(".purchase1");
         food1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Mouth </h4> <h5> +1 Click Power </h5></div>";
+         let food2 = document.querySelector(".purchase2");
+        food2.innerHTML = "<div class='purchase2' onclick='buy2()'> <h4> 10 More Mouth </h4> <h5> +3 Click Power </h5></div>";
         let determinenow = document.querySelector('.undetermined');
         determinenow.innerHTML = "<b class='undetermined'>Food</b>";
       };
       function aura() {
         let aura1 = document.querySelector(".purchase1");
         aura1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Rizz </h4> <h5> +1 Click Power </h5></div>";
+        let aura2 = document.querySelector(".purchase2");
+        aura2.innerHTML = "<div class='purchase1' onclick='buy2()'> <h4> 10 More Rizz </h4> <h5> +3 Click Power </h5></div>";
         let determinenow = document.querySelector('.undetermined');
         determinenow.innerHTML = "<b class='undetermined'>Aura</b>";
       };
