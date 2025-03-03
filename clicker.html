@@ -3,36 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name='keywords' content='Clicker Game, Free'>
-    <meta name='description' content='Monopoly 1 player and 2 player'>
+    <meta name='description' content='Clicker Game 1 player'>
     <meta name='subject' content='Monopoly'>
     <meta name='copyright' content="Royal's Game Developers">
     <meta name='language' content='EN-GB'>
     <meta name='robots' content='index,follow'>
-    <meta name='revised' content='Sunday, March 2nd, 2025, 12:26 pm'>
+    <meta name='revised' content='Monday, March 3rd, 2025, 1:05 pm'>
     <meta name='abstract' content=''>
-    <meta name='topic' content=''>
+    <meta name='topic' content='Clicker Game'>
     <meta name='summary' content=''>
     <meta name='Classification' content='Business'>
     <meta name='author' content='Keegan, royalsgamedevelopers@gmail.com'>
     <meta name='designer' content='Keegan, royalsgamedevelopers@gmail.com'>
     <meta name='reply-to' content='royalsgamedevelopers@gmail.com'>
     <meta name='owner' content=''>
-    <meta name='url' content='http://www.websiteaddrress.com'>
-    <meta name='identifier-URL' content='http://www.websiteaddress.com'>
+    <meta name='url' content='https://smilynarwhal77.github.io/fun/clicker'>
+    <meta name='identifier-URL' content=''>
     <meta name='directory' content='submission'>
-    <meta name='pagename' content='Monopoly-Online'>
+    <meta name='pagename' content='Clicker-Game-Online'>
     <meta name='category' content=''>
     <meta name='coverage' content='Worldwide'>
     <meta name='distribution' content='Global'>
     <meta name='rating' content='General'>
     <meta name='revisit-after' content='7 days'>
-    <meta name='subtitle' content='Monopoly is a fun board game'>
+    <meta name='subtitle' content='Clicker Games are fun'>
     <meta name='target' content='all'>
     <meta name='HandheldFriendly' content='False'>
     <meta name='MobileOptimized' content='no'>
-    <meta name='date' content='Mar. 02, 2025'>
-    <meta name='search_date' content='2025-03-02'>
-    <meta name='DC.title' content='Monopoly Online'>
+    <meta name='date' content='Mar. 03, 2025'>
+    <meta name='search_date' content='2025-03-03'>
+    <meta name='DC.title' content='Clicker Game Online'>
     <meta name='ResourceLoaderDynamicStyles' content=''>
     <meta name='medium' content='game'>
     <meta name='syndication-source' content='https://mashable.com/2008/12/24/free-brand-monitoring-tools/'>
@@ -87,6 +87,48 @@
         width: 30vw;
       } 
     </style>
+    <script>
+      let a1 = 1;
+      let clickpower = 1;
+      let ps = 0;
+      let clicks = 0;
+      function buy1() {
+        a1 += 1;
+        alert(a1);
+      }; 
+      function food() {
+        let food1 = document.querySelector(".purchase1");
+        food1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Mouth </h4> <h5> +1 Click Power </h5></div>";
+        let determinenow = document.querySelector(".undetermined");
+        determinenow.innerHTML = "<b class="undetermined">Food</b>";
+      };
+      function aura() {
+        let aura1 = document.querySelector(".purchase1");
+        aura1.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Rizz </h4> <h5> +1 Click Power </h5></div>";
+        let determinenow = document.querySelector(".undetermined");
+        determinenow.innerHTML = "<b class="undetermined">Aura</b>";
+      };
+      function activatetheme(theme) {
+        if (theme == 0) {
+          food();
+        } else if (theme == 1) {
+          aura();
+        }
+      };
+      function choosetheme() {
+        let a = "food";
+        let b = "aura";
+        let c = Math.floor(Math.random() * 2);
+        let theme;
+        if (c == 0) {
+          theme = a;
+        } else if (c == 1) {
+          theme = b;
+        };
+        window.alert("Your chosen theme is " + theme);
+        activatetheme(theme);
+      }
+    </script>
   </head>
   <body>
     <header class="top">
@@ -182,42 +224,7 @@
       </article>
     </main>
     <script>
-      let a1 = 1;
-      let clickpower = 1;
-      let ps = 0;
-      function buy1() {
-        a1 += 1;
-        alert(a1);
-      }; 
-      function food() {
-        let Ahhh = document.querySelector(".purchase1");
-        Ahhh.innerHTML = "<div class='purchase1' onclick='buy1()'> <h4> 1 More Mouth </h4> <h5> +1 Click Power </h5></div>";
-        let determinenow = document.querySelector(".undetermined");
-        determinenow.innerHTML = "<b>Food</b>";
-      };
-      function aura() {
-        food();
-      };
-      function activatetheme(theme) {
-        if (theme == 0) {
-          food();
-        } else if (theme == 1) {
-          aura();
-        }
-      };
-      function choosetheme() {
-        let a = "food";
-        let b = "aura";
-        let c = Math.floor(Math.random() * 2);
-        let theme;
-        if (c == 0) {
-          theme = a;
-        } else if (c == 1) {
-          theme = b;
-        };
-        window.alert("Your chosen theme is " + theme);
-        activatetheme(theme);
-      }
+      
     </script>
   </body>
 </html>
